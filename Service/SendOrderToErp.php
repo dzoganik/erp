@@ -55,7 +55,7 @@ class SendOrderToErp
      */
     public function execute(array $data): Response
     {
-        return $this->doRequest($this->config->getApiRequestEndpoint(), $dataToErp);
+        return $this->doRequest($this->config->getApiRequestEndpoint(), $data);
     }
 
     /**
