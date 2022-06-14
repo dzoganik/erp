@@ -55,12 +55,13 @@ class QueueOrder implements ObserverInterface
         $order = $observer->getEvent()->getOrder();
 
         $publishData = [
-            'order_id' => $order->getIncrementId(),
+            'entity_id' => $order->getId(),
+            'increment_id' => $order->getIncrementId(),
             'customer_email' => $order->getCustomerEmail(),
             'items_amount' => $order->getTotalItemCount(),
         ];
 
-        $this->publisher->publish('dzoganik.erp.topic', $this->serializer->serialize($publishData));
-        $this->logger->info('Order sent to ERP.', $publishData);
+        $this->publisher->publish('dzoganik.erp.order.send.topic', $this->serializer->serialize($publishData));
+        $this->logger->info('Order sent to dzoganik.erp.order.send queue.', $publishData);
     }
 }
