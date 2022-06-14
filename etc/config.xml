@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <dzoganik_erp>
+            <api_request>
+                <uri>https://example.com</uri>
+                <endpoint>/api/v1/orders</endpoint>
+            </api_request>
+        </dzoganik_erp>
+    </default>
+</config>

@@ -1,0 +1,14 @@
+{
+    "dzoganik_erp_transmission": {
+        "column": {
+            "transmission_id": true,
+            "order_id": true,
+            "return_code": true,
+            "created_at": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "DZOGANIK_ERP_TRANSMISSION_ORDER_ID_SALES_ORDER_ENTITY_ID": true
+        }
+    }
+}
