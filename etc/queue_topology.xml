@@ -1,5 +1,11 @@
+<?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework-message-queue:etc/queue_topology.xsd">
-    <exchange name="dzoganik.erp.exchange" type="topic" connection="amqp">
-        <binding id="dzoganik.erp.binding" topic="dzoganik.erp.topic" destinationType="queue" destination="dzoganik.erp.queue"/>
+    <exchange name="dzoganik.erp.order.send" type="topic" connection="amqp">
+        <binding
+                id="dzoganik.erp.order.send.binding"
+                topic="dzoganik.erp.order.send.topic"
+                destinationType="queue"
+                destination="dzoganik.erp.order.send"
+        />
     </exchange>
 </config>
